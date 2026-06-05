@@ -97,19 +97,31 @@ const observer = new IntersectionObserver((entries) => {
 
 fadeEls.forEach(el => observer.observe(el));
 
-// ===== GALLERY LIGHTBOX =====
-const galleryImgs = document.querySelectorAll('.gallery-img');
+// ===== LIGHTBOX =====
 const lightbox = document.getElementById('lightbox');
 const lightboxImg = document.getElementById('lightboxImg');
 const lightboxClose = document.getElementById('lightboxClose');
 
-galleryImgs.forEach(img => {
-  img.addEventListener('click', () => {
-    lightboxImg.src = img.src;
-    lightboxImg.alt = img.alt;
-    lightbox.classList.add('active');
-    document.body.style.overflow = 'hidden';
-  });
+function openLightbox(src, alt) {
+  lightboxImg.src = src;
+  lightboxImg.alt = alt || '';
+  lightbox.classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeLightbox() {
+  lightbox.classList.remove('active');
+  document.body.style.overflow = '';
+}
+
+// Award "View Certificate" buttons
+document.querySelectorAll('.award-view-btn').forEach(btn => {
+  btn.addEventListener('click', () => openLightbox(btn.dataset.src, btn.dataset.alt));
+});
+
+// Gallery "View Photo" buttons
+document.querySelectorAll('.gallery-view-btn').forEach(btn => {
+  btn.addEventListener('click', () => openLightbox(btn.dataset.src, btn.dataset.alt));
 });
 
 lightboxClose.addEventListener('click', closeLightbox);
@@ -119,11 +131,6 @@ lightbox.addEventListener('click', (e) => {
 document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape') closeLightbox();
 });
-
-function closeLightbox() {
-  lightbox.classList.remove('active');
-  document.body.style.overflow = '';
-}
 
 // ===== CONTACT FORM =====
 const contactForm = document.getElementById('contactForm');
