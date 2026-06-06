@@ -180,172 +180,225 @@
   <section id="awards" class="section awards">
     <div class="container">
       <h2 class="section-title">Awards & <span>Certificates</span></h2>
-      <p class="section-sub">Recognition and certifications I've earned along the way.</p>
-      <div class="awards-grid">
+      <p class="section-sub">Recognition, certifications, and memories I've earned along the way.</p>
 
-        <div class="award-card">
-          <div class="award-img">
+      <!-- ── Tab filters ── -->
+      <div class="awards-tabs">
+        <button class="awards-tab active" data-filter="all">All</button>
+        <button class="awards-tab" data-filter="certificate">Certificates</button>
+        <button class="awards-tab" data-filter="photo">Gallery</button>
+      </div>
+
+      <!-- ── Unified grid ── -->
+      <div class="unified-grid">
+
+        <!-- Certificate cards -->
+        <div class="uni-card" data-type="certificate">
+          <div class="uni-card-img">
             <img src="assets/Python Essential 1.png" alt="Python Essentials 1" />
-            <div class="award-overlay">
-              <button class="btn btn-sm award-view-btn" data-src="assets/Python Essential 1.png" data-alt="Python Essentials 1">
-                <i class="fas fa-eye"></i> View Certificate
+            <div class="uni-card-overlay">
+              <button class="uni-view-btn award-view-btn" data-src="assets/Python Essential 1.png" data-alt="Python Essentials 1">
+                <i class="fas fa-expand"></i>
               </button>
             </div>
           </div>
-          <div class="award-info">
-            <div class="award-icon"><i class="fas fa-certificate"></i></div>
+          <div class="uni-card-body">
+            <div class="uni-icon"><i class="fas fa-certificate"></i></div>
             <h3>Python Essentials 1</h3>
             <p>Cisco Networking Academy</p>
-            <span class="award-badge">Certification</span>
+            <span class="uni-badge">Certification</span>
           </div>
         </div>
 
-        <div class="award-card">
-          <div class="award-img">
+        <div class="uni-card" data-type="certificate">
+          <div class="uni-card-img">
             <img src="assets/Python Essential 2.png" alt="Python Essentials 2" />
-            <div class="award-overlay">
-              <button class="btn btn-sm award-view-btn" data-src="assets/Python Essential 2.png" data-alt="Python Essentials 2">
-                <i class="fas fa-eye"></i> View Certificate
+            <div class="uni-card-overlay">
+              <button class="uni-view-btn award-view-btn" data-src="assets/Python Essential 2.png" data-alt="Python Essentials 2">
+                <i class="fas fa-expand"></i>
               </button>
             </div>
           </div>
-          <div class="award-info">
-            <div class="award-icon"><i class="fas fa-certificate"></i></div>
+          <div class="uni-card-body">
+            <div class="uni-icon"><i class="fas fa-certificate"></i></div>
             <h3>Python Essentials 2</h3>
             <p>Cisco Networking Academy</p>
-            <span class="award-badge">Certification</span>
+            <span class="uni-badge">Certification</span>
           </div>
         </div>
 
-        <div class="award-card">
-          <div class="award-img">
+        <div class="uni-card" data-type="certificate">
+          <div class="uni-card-img">
             <img src="assets/OJT Certificate.jpg" alt="OJT Certificate" />
-            <div class="award-overlay">
-              <button class="btn btn-sm award-view-btn" data-src="assets/OJT Certificate.jpg" data-alt="OJT Certificate">
-                <i class="fas fa-eye"></i> View Certificate
+            <div class="uni-card-overlay">
+              <button class="uni-view-btn award-view-btn" data-src="assets/OJT Certificate.jpg" data-alt="OJT Certificate">
+                <i class="fas fa-expand"></i>
               </button>
             </div>
           </div>
-          <div class="award-info">
-            <div class="award-icon"><i class="fas fa-award"></i></div>
+          <div class="uni-card-body">
+            <div class="uni-icon"><i class="fas fa-award"></i></div>
             <h3>OJT Certificate</h3>
             <p>On-the-Job Training Completion</p>
-            <span class="award-badge">Certificate</span>
+            <span class="uni-badge">Certificate</span>
           </div>
         </div>
 
-        <div class="award-card">
-          <div class="award-img">
+        <div class="uni-card" data-type="certificate">
+          <div class="uni-card-img">
             <img src="assets/692857140_993621913085942_7148905409843279865_n.jpg" alt="Organization Certificate" />
-            <div class="award-overlay">
-              <button class="btn btn-sm award-view-btn" data-src="assets/692857140_993621913085942_7148905409843279865_n.jpg" data-alt="Organization Certificate">
-                <i class="fas fa-eye"></i> View Certificate
+            <div class="uni-card-overlay">
+              <button class="uni-view-btn award-view-btn" data-src="assets/692857140_993621913085942_7148905409843279865_n.jpg" data-alt="Organization Certificate">
+                <i class="fas fa-expand"></i>
               </button>
             </div>
           </div>
-          <div class="award-info">
-            <div class="award-icon"><i class="fas fa-users"></i></div>
+          <div class="uni-card-body">
+            <div class="uni-icon"><i class="fas fa-users"></i></div>
             <h3>Organization Certificate</h3>
             <p>Active Organizational Membership</p>
-            <span class="award-badge">Certificate</span>
+            <span class="uni-badge">Certificate</span>
           </div>
         </div>
 
-      </div>
-
-      <!-- Gallery -->
-      <h3 class="gallery-title">Photo Gallery</h3>
-      <div class="gallery-grid">
-
-        <div class="gallery-card">
-          <div class="gallery-card-img">
+        <!-- Gallery / photo cards -->
+        <div class="uni-card" data-type="photo">
+          <div class="uni-card-img">
             <img src="assets/c1.jpg" alt="Gallery 1" />
-            <div class="gallery-card-overlay">
-              <button class="btn btn-sm gallery-view-btn" data-src="assets/c1.jpg" data-alt="Gallery 1">
-                <i class="fas fa-eye"></i> View Photo
+            <div class="uni-card-overlay">
+              <button class="uni-view-btn gallery-view-btn" data-src="assets/c1.jpg" data-alt="Gallery 1">
+                <i class="fas fa-expand"></i>
               </button>
             </div>
           </div>
+          <div class="uni-card-body">
+            <div class="uni-icon"><i class="fas fa-image"></i></div>
+            <h3>Gallery Photo</h3>
+            <p>Event & Activity Memory</p>
+            <span class="uni-badge uni-badge--photo">Photo</span>
+          </div>
         </div>
 
-        <div class="gallery-card">
-          <div class="gallery-card-img">
+        <div class="uni-card" data-type="photo">
+          <div class="uni-card-img">
             <img src="assets/c2.jpg" alt="Gallery 2" />
-            <div class="gallery-card-overlay">
-              <button class="btn btn-sm gallery-view-btn" data-src="assets/c2.jpg" data-alt="Gallery 2">
-                <i class="fas fa-eye"></i> View Photo
+            <div class="uni-card-overlay">
+              <button class="uni-view-btn gallery-view-btn" data-src="assets/c2.jpg" data-alt="Gallery 2">
+                <i class="fas fa-expand"></i>
               </button>
             </div>
           </div>
+          <div class="uni-card-body">
+            <div class="uni-icon"><i class="fas fa-image"></i></div>
+            <h3>Gallery Photo</h3>
+            <p>Event & Activity Memory</p>
+            <span class="uni-badge uni-badge--photo">Photo</span>
+          </div>
         </div>
 
-        <div class="gallery-card">
-          <div class="gallery-card-img">
+        <div class="uni-card" data-type="photo">
+          <div class="uni-card-img">
             <img src="assets/c4.jpg" alt="Gallery 3" />
-            <div class="gallery-card-overlay">
-              <button class="btn btn-sm gallery-view-btn" data-src="assets/c4.jpg" data-alt="Gallery 3">
-                <i class="fas fa-eye"></i> View Photo
+            <div class="uni-card-overlay">
+              <button class="uni-view-btn gallery-view-btn" data-src="assets/c4.jpg" data-alt="Gallery 3">
+                <i class="fas fa-expand"></i>
               </button>
             </div>
           </div>
+          <div class="uni-card-body">
+            <div class="uni-icon"><i class="fas fa-image"></i></div>
+            <h3>Gallery Photo</h3>
+            <p>Event & Activity Memory</p>
+            <span class="uni-badge uni-badge--photo">Photo</span>
+          </div>
         </div>
 
-        <div class="gallery-card">
-          <div class="gallery-card-img">
+        <div class="uni-card" data-type="photo">
+          <div class="uni-card-img">
             <img src="assets/c5.jpg" alt="Gallery 4" />
-            <div class="gallery-card-overlay">
-              <button class="btn btn-sm gallery-view-btn" data-src="assets/c5.jpg" data-alt="Gallery 4">
-                <i class="fas fa-eye"></i> View Photo
+            <div class="uni-card-overlay">
+              <button class="uni-view-btn gallery-view-btn" data-src="assets/c5.jpg" data-alt="Gallery 4">
+                <i class="fas fa-expand"></i>
               </button>
             </div>
           </div>
+          <div class="uni-card-body">
+            <div class="uni-icon"><i class="fas fa-image"></i></div>
+            <h3>Gallery Photo</h3>
+            <p>Event & Activity Memory</p>
+            <span class="uni-badge uni-badge--photo">Photo</span>
+          </div>
         </div>
 
-        <div class="gallery-card">
-          <div class="gallery-card-img">
+        <div class="uni-card" data-type="photo">
+          <div class="uni-card-img">
             <img src="assets/c6.jpg" alt="Gallery 5" />
-            <div class="gallery-card-overlay">
-              <button class="btn btn-sm gallery-view-btn" data-src="assets/c6.jpg" data-alt="Gallery 5">
-                <i class="fas fa-eye"></i> View Photo
+            <div class="uni-card-overlay">
+              <button class="uni-view-btn gallery-view-btn" data-src="assets/c6.jpg" data-alt="Gallery 5">
+                <i class="fas fa-expand"></i>
               </button>
             </div>
           </div>
+          <div class="uni-card-body">
+            <div class="uni-icon"><i class="fas fa-image"></i></div>
+            <h3>Gallery Photo</h3>
+            <p>Event & Activity Memory</p>
+            <span class="uni-badge uni-badge--photo">Photo</span>
+          </div>
         </div>
 
-        <div class="gallery-card">
-          <div class="gallery-card-img">
+        <div class="uni-card" data-type="photo">
+          <div class="uni-card-img">
             <img src="assets/c7.jpg" alt="Gallery 6" />
-            <div class="gallery-card-overlay">
-              <button class="btn btn-sm gallery-view-btn" data-src="assets/c7.jpg" data-alt="Gallery 6">
-                <i class="fas fa-eye"></i> View Photo
+            <div class="uni-card-overlay">
+              <button class="uni-view-btn gallery-view-btn" data-src="assets/c7.jpg" data-alt="Gallery 6">
+                <i class="fas fa-expand"></i>
               </button>
             </div>
           </div>
+          <div class="uni-card-body">
+            <div class="uni-icon"><i class="fas fa-image"></i></div>
+            <h3>Gallery Photo</h3>
+            <p>Event & Activity Memory</p>
+            <span class="uni-badge uni-badge--photo">Photo</span>
+          </div>
         </div>
 
-        <div class="gallery-card">
-          <div class="gallery-card-img">
+        <div class="uni-card" data-type="photo">
+          <div class="uni-card-img">
             <img src="assets/c8.jpg" alt="Gallery 7" />
-            <div class="gallery-card-overlay">
-              <button class="btn btn-sm gallery-view-btn" data-src="assets/c8.jpg" data-alt="Gallery 7">
-                <i class="fas fa-eye"></i> View Photo
+            <div class="uni-card-overlay">
+              <button class="uni-view-btn gallery-view-btn" data-src="assets/c8.jpg" data-alt="Gallery 7">
+                <i class="fas fa-expand"></i>
               </button>
             </div>
           </div>
+          <div class="uni-card-body">
+            <div class="uni-icon"><i class="fas fa-image"></i></div>
+            <h3>Gallery Photo</h3>
+            <p>Event & Activity Memory</p>
+            <span class="uni-badge uni-badge--photo">Photo</span>
+          </div>
         </div>
 
-        <div class="gallery-card">
-          <div class="gallery-card-img">
+        <div class="uni-card" data-type="photo">
+          <div class="uni-card-img">
             <img src="assets/c9.jpg" alt="Gallery 8" />
-            <div class="gallery-card-overlay">
-              <button class="btn btn-sm gallery-view-btn" data-src="assets/c9.jpg" data-alt="Gallery 8">
-                <i class="fas fa-eye"></i> View Photo
+            <div class="uni-card-overlay">
+              <button class="uni-view-btn gallery-view-btn" data-src="assets/c9.jpg" data-alt="Gallery 8">
+                <i class="fas fa-expand"></i>
               </button>
             </div>
           </div>
+          <div class="uni-card-body">
+            <div class="uni-icon"><i class="fas fa-image"></i></div>
+            <h3>Gallery Photo</h3>
+            <p>Event & Activity Memory</p>
+            <span class="uni-badge uni-badge--photo">Photo</span>
+          </div>
         </div>
 
-      </div>
+      </div><!-- /unified-grid -->
     </div>
   </section>
 

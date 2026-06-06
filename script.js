@@ -82,7 +82,7 @@ typeEffect();
 
 // ===== FADE-IN ON SCROLL =====
 const fadeEls = document.querySelectorAll(
-  '.project-card, .award-card, .contact-card, .about-grid, .hero-content, .hero-image, .about-image, .about-content, .contact-form'
+  '.project-card, .uni-card, .contact-card, .about-grid, .hero-content, .hero-image, .about-image, .about-content, .contact-form'
 );
 fadeEls.forEach(el => el.classList.add('fade-in'));
 
@@ -130,6 +130,23 @@ lightbox.addEventListener('click', (e) => {
 });
 document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape') closeLightbox();
+});
+
+// ===== AWARDS TAB FILTER =====
+document.querySelectorAll('.awards-tab').forEach(tab => {
+  tab.addEventListener('click', () => {
+    document.querySelectorAll('.awards-tab').forEach(t => t.classList.remove('active'));
+    tab.classList.add('active');
+
+    const filter = tab.dataset.filter;
+    document.querySelectorAll('.uni-card').forEach(card => {
+      if (filter === 'all' || card.dataset.type === filter) {
+        card.classList.remove('hidden');
+      } else {
+        card.classList.add('hidden');
+      }
+    });
+  });
 });
 
 // ===== CONTACT FORM =====
