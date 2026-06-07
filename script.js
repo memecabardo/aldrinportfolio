@@ -132,6 +132,28 @@ document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape') closeLightbox();
 });
 
+// ===== PROJECT IMAGE SLIDERS =====
+function initSliders() {
+  document.querySelectorAll('.project-slider').forEach(slider => {
+    const slides = slider.querySelectorAll('.slide');
+    const dots   = slider.querySelectorAll('.dot');
+    let current  = 0;
+
+    function goTo(index) {
+      slides[current].classList.remove('active');
+      dots[current].classList.remove('active');
+      current = (index + slides.length) % slides.length;
+      slides[current].classList.add('active');
+      dots[current].classList.add('active');
+    }
+
+    slider.querySelector('.slide-prev').addEventListener('click', () => goTo(current - 1));
+    slider.querySelector('.slide-next').addEventListener('click', () => goTo(current + 1));
+    dots.forEach((dot, i) => dot.addEventListener('click', () => goTo(i)));
+  });
+}
+initSliders();
+
 // ===== AWARDS TAB FILTER =====
 document.querySelectorAll('.awards-tab').forEach(tab => {
   tab.addEventListener('click', () => {

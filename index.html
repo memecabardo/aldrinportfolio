@@ -136,12 +136,16 @@
       <p class="section-sub">Here are some of the projects I've worked on.</p>
       <div class="projects-grid">
 
+        <!-- Project 1: combined b1 + b1.2 -->
         <div class="project-card">
-          <div class="project-img">
-            <img src="assets/b1.png" alt="Project 1" />
-            <div class="project-overlay">
-              <a href="#" class="btn btn-sm">Live Demo</a>
-              <a href="#" class="btn btn-sm btn-outline">Source Code</a>
+          <div class="project-img project-slider" id="slider-p1">
+            <img src="assets/b1.png" alt="Project One - Screen 1" class="slide active" />
+            <img src="assets/b1.2.png" alt="Project One - Screen 2" class="slide" />
+            <button class="slide-btn slide-prev" data-slider="slider-p1" aria-label="Previous">&#8249;</button>
+            <button class="slide-btn slide-next" data-slider="slider-p1" aria-label="Next">&#8250;</button>
+            <div class="slide-dots">
+              <span class="dot active" data-slider="slider-p1" data-index="0"></span>
+              <span class="dot" data-slider="slider-p1" data-index="1"></span>
             </div>
           </div>
           <div class="project-info">
@@ -151,48 +155,74 @@
           </div>
         </div>
 
+        <!-- Project 2: b2.1 + b2.2 -->
         <div class="project-card">
-          <div class="project-img">
-            <img src="assets/b1.2.png" alt="Project 2" />
-            <div class="project-overlay">
-              <a href="#" class="btn btn-sm">Live Demo</a>
-              <a href="#" class="btn btn-sm btn-outline">Source Code</a>
+          <div class="project-img project-slider" id="slider-p2">
+            <img src="assets/b2.1.png" alt="Project Two - Screen 1" class="slide active" />
+            <img src="assets/b2.2.png" alt="Project Two - Screen 2" class="slide" />
+            <button class="slide-btn slide-prev" data-slider="slider-p2" aria-label="Previous">&#8249;</button>
+            <button class="slide-btn slide-next" data-slider="slider-p2" aria-label="Next">&#8250;</button>
+            <div class="slide-dots">
+              <span class="dot active" data-slider="slider-p2" data-index="0"></span>
+              <span class="dot" data-slider="slider-p2" data-index="1"></span>
             </div>
           </div>
           <div class="project-info">
             <h3>Project Two</h3>
-            <p>A responsive website with modern design principles and interactive elements.</p>
-            <div class="project-tags"><span>HTML</span><span>CSS</span><span>PHP</span></div>
-          </div>
-        </div>
-
-        <div class="project-card">
-          <div class="project-img">
-            <img src="assets/b2.1.png" alt="Project 3" />
-            <div class="project-overlay">
-              <a href="#" class="btn btn-sm">Live Demo</a>
-              <a href="#" class="btn btn-sm btn-outline">Source Code</a>
-            </div>
-          </div>
-          <div class="project-info">
-            <h3>Project Three</h3>
-            <p>A Python-based system for data management and automation tasks.</p>
-            <div class="project-tags"><span>Python</span><span>MySQL</span></div>
-          </div>
-        </div>
-
-        <div class="project-card">
-          <div class="project-img">
-            <img src="assets/b2.2.png" alt="Project 4" />
-            <div class="project-overlay">
-              <a href="#" class="btn btn-sm">Live Demo</a>
-              <a href="#" class="btn btn-sm btn-outline">Source Code</a>
-            </div>
-          </div>
-          <div class="project-info">
-            <h3>Project Four</h3>
             <p>A database-driven application with CRUD operations and user authentication.</p>
             <div class="project-tags"><span>PHP</span><span>MySQL</span><span>Bootstrap</span></div>
+          </div>
+        </div>
+
+        <!-- Project 3: Twin Palm Reservation Management System -->
+        <div class="project-card">
+          <div class="project-img project-slider" id="slider-tp">
+            <img src="assets/tp1.png" alt="Twin Palm - Screen 1" class="slide active" />
+            <img src="assets/tp2.png" alt="Twin Palm - Screen 2" class="slide" />
+            <img src="assets/tp3.png" alt="Twin Palm - Screen 3" class="slide" />
+            <img src="assets/tp4.png" alt="Twin Palm - Screen 4" class="slide" />
+            <button class="slide-btn slide-prev" data-slider="slider-tp" aria-label="Previous">&#8249;</button>
+            <button class="slide-btn slide-next" data-slider="slider-tp" aria-label="Next">&#8250;</button>
+            <div class="slide-dots">
+              <span class="dot active" data-slider="slider-tp" data-index="0"></span>
+              <span class="dot" data-slider="slider-tp" data-index="1"></span>
+              <span class="dot" data-slider="slider-tp" data-index="2"></span>
+              <span class="dot" data-slider="slider-tp" data-index="3"></span>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3>Twin Palm Reservation Management System</h3>
+            <p>A reservation and booking management system designed for Twin Palm, handling guest scheduling, room availability, and record keeping.</p>
+            <div class="project-tags"><span>PHP</span><span>MySQL</span><span>JavaScript</span><span>Bootstrap</span></div>
+          </div>
+        </div>
+
+        <!-- Project 4: Alcess Sales and Inventory Management System -->
+        <div class="project-card">
+          <div class="project-img project-slider" id="slider-alcess">
+            <img src="assets/a1.png" alt="Alcess - Screen 1" class="slide active" />
+            <img src="assets/a2.png" alt="Alcess - Screen 2" class="slide" />
+            <img src="assets/a3.png" alt="Alcess - Screen 3" class="slide" />
+            <img src="assets/a4.png" alt="Alcess - Screen 4" class="slide" />
+            <img src="assets/a5.png" alt="Alcess - Screen 5" class="slide" />
+            <img src="assets/a6.png" alt="Alcess - Screen 6" class="slide" />
+            <img src="assets/a7.png" alt="Alcess - Screen 7" class="slide" />
+            <button class="slide-btn slide-prev" data-slider="slider-alcess" aria-label="Previous">&#8249;</button>
+            <button class="slide-btn slide-next" data-slider="slider-alcess" aria-label="Next">&#8250;</button>
+            <div class="slide-dots">
+              <span class="dot active" data-slider="slider-alcess" data-index="0"></span>
+              <span class="dot" data-slider="slider-alcess" data-index="1"></span>
+              <span class="dot" data-slider="slider-alcess" data-index="2"></span>
+              <span class="dot" data-slider="slider-alcess" data-index="3"></span>
+              <span class="dot" data-slider="slider-alcess" data-index="4"></span>
+              <span class="dot" data-slider="slider-alcess" data-index="5"></span>
+              <span class="dot" data-slider="slider-alcess" data-index="6"></span>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3>Alcess Sales &amp; Inventory Management System</h3>
+            <p>A full-featured sales and inventory management system with online ordering, product tracking, stock monitoring, and sales reporting.</p>
+            <div class="project-tags"><span>PHP</span><span>MySQL</span><span>JavaScript</span><span>Bootstrap</span><span>Online Ordering</span></div>
           </div>
         </div>
 
