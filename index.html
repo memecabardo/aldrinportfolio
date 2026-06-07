@@ -127,7 +127,7 @@
       <div class="projects-grid">
 
         <!-- Project 1: Alcess Brochure -->
-        <div class="project-card">
+        <div class="project-card" data-proj-title="Alcess Brochure" data-proj-desc="A promotional brochure design for the Alcess Sales &amp; Inventory Management System showcasing its key features and benefits.">
           <div class="project-img project-slider" id="slider-p1">
             <img src="assets/b1.png" alt="Alcess Brochure - Screen 1" class="slide active" />
             <img src="assets/b1.2.png" alt="Alcess Brochure - Screen 2" class="slide" />
@@ -137,16 +137,17 @@
               <span class="dot active" data-slider="slider-p1" data-index="0"></span>
               <span class="dot" data-slider="slider-p1" data-index="1"></span>
             </div>
+            <div class="proj-view-overlay"><span><i class="fas fa-expand-alt"></i> View Project</span></div>
           </div>
           <div class="project-info">
             <h3>Alcess Brochure</h3>
-            <p>A promotional brochure design for the Alcess Sales & Inventory Management System showcasing its key features and benefits.</p>
+            <p>A promotional brochure design for the Alcess Sales &amp; Inventory Management System showcasing its key features and benefits.</p>
             <div class="project-tags"><span>Graphic Design</span><span>Brochure</span></div>
           </div>
         </div>
 
         <!-- Project 2: Lifeline Brochure -->
-        <div class="project-card">
+        <div class="project-card" data-proj-title="Lifeline Brochure" data-proj-desc="A professional brochure design created for Lifeline, highlighting the product overview, features, and brand identity.">
           <div class="project-img project-slider" id="slider-p2">
             <img src="assets/b2.1.png" alt="Lifeline Brochure - Screen 1" class="slide active" />
             <img src="assets/b2.2.png" alt="Lifeline Brochure - Screen 2" class="slide" />
@@ -156,6 +157,7 @@
               <span class="dot active" data-slider="slider-p2" data-index="0"></span>
               <span class="dot" data-slider="slider-p2" data-index="1"></span>
             </div>
+            <div class="proj-view-overlay"><span><i class="fas fa-expand-alt"></i> View Project</span></div>
           </div>
           <div class="project-info">
             <h3>Lifeline Brochure</h3>
@@ -165,9 +167,10 @@
         </div>
 
         <!-- Project 3: Lifeline Poster -->
-        <div class="project-card">
+        <div class="project-card" data-proj-title="Lifeline Poster" data-proj-desc="A visually striking poster design for Lifeline, crafted to communicate the brand message with bold visuals and clean layout.">
           <div class="project-img">
             <img src="assets/poster1.jpg" alt="Lifeline Poster" style="width:100%;height:100%;object-fit:cover;" />
+            <div class="proj-view-overlay"><span><i class="fas fa-expand-alt"></i> View Project</span></div>
           </div>
           <div class="project-info">
             <h3>Lifeline Poster</h3>
@@ -176,8 +179,8 @@
           </div>
         </div>
 
-        <!-- Project 3: Twin Palm Reservation Management System -->
-        <div class="project-card">
+        <!-- Project 4: Twin Palm Reservation Management System -->
+        <div class="project-card" data-proj-title="Twin Palm Reservation Management System" data-proj-desc="A reservation and booking management system designed for Twin Palm, handling guest scheduling, room availability, and record keeping.">
           <div class="project-img project-slider" id="slider-tp">
             <img src="assets/tp1.png" alt="Twin Palm - Screen 1" class="slide active" />
             <img src="assets/tp2.png" alt="Twin Palm - Screen 2" class="slide" />
@@ -191,6 +194,7 @@
               <span class="dot" data-slider="slider-tp" data-index="2"></span>
               <span class="dot" data-slider="slider-tp" data-index="3"></span>
             </div>
+            <div class="proj-view-overlay"><span><i class="fas fa-expand-alt"></i> View Project</span></div>
           </div>
           <div class="project-info">
             <h3>Twin Palm Reservation Management System</h3>
@@ -199,8 +203,8 @@
           </div>
         </div>
 
-        <!-- Project 4: Alcess Sales and Inventory Management System -->
-        <div class="project-card">
+        <!-- Project 5: Alcess Sales and Inventory Management System -->
+        <div class="project-card" data-proj-title="Alcess Sales &amp; Inventory Management System" data-proj-desc="A full-featured sales and inventory management system with online ordering, product tracking, stock monitoring, and sales reporting.">
           <div class="project-img project-slider" id="slider-alcess">
             <img src="assets/a1.png" alt="Alcess - Screen 1" class="slide active" />
             <img src="assets/a2.png" alt="Alcess - Screen 2" class="slide" />
@@ -220,6 +224,7 @@
               <span class="dot" data-slider="slider-alcess" data-index="5"></span>
               <span class="dot" data-slider="slider-alcess" data-index="6"></span>
             </div>
+            <div class="proj-view-overlay"><span><i class="fas fa-expand-alt"></i> View Project</span></div>
           </div>
           <div class="project-info">
             <h3>Alcess Sales &amp; Inventory Management System</h3>
@@ -503,6 +508,22 @@
   <div class="lightbox" id="lightbox">
     <button class="lightbox-close" id="lightboxClose" aria-label="Close">&times;</button>
     <img id="lightboxImg" src="" alt="Lightbox" />
+  </div>
+
+  <!-- Project Lightbox -->
+  <div class="proj-lightbox" id="projLightbox">
+    <button class="proj-lightbox-close" id="projLightboxClose" aria-label="Close">&times;</button>
+    <div class="proj-lightbox-inner">
+      <div class="proj-lightbox-img-wrap">
+        <button class="proj-lb-arrow proj-lb-prev" id="projLbPrev">&#8249;</button>
+        <img id="projLightboxImg" src="" alt="" />
+        <button class="proj-lb-arrow proj-lb-next" id="projLbNext">&#8250;</button>
+      </div>
+      <div class="proj-lightbox-info">
+        <h3 id="projLightboxTitle"></h3>
+        <p id="projLightboxDesc"></p>
+      </div>
+    </div>
   </div>
 
   <script src="script.js"></script>

@@ -158,6 +158,70 @@ function initSliders() {
 }
 initSliders();
 
+// ===== PROJECT LIGHTBOX =====
+const projLightbox      = document.getElementById('projLightbox');
+const projLightboxImg   = document.getElementById('projLightboxImg');
+const projLightboxTitle = document.getElementById('projLightboxTitle');
+const projLightboxDesc  = document.getElementById('projLightboxDesc');
+const projLightboxClose = document.getElementById('projLightboxClose');
+const projLbPrev        = document.getElementById('projLbPrev');
+const projLbNext        = document.getElementById('projLbNext');
+
+let projImages  = [];
+let projCurrent = 0;
+
+function openProjLightbox(images, startIndex, title, desc) {
+  projImages  = images;
+  projCurrent = startIndex;
+  projLightboxTitle.textContent = title;
+  projLightboxDesc.textContent  = desc;
+  projLightboxImg.src = images[projCurrent];
+  projLbPrev.classList.toggle('hidden', images.length <= 1);
+  projLbNext.classList.toggle('hidden', images.length <= 1);
+  projLightbox.classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeProjLightbox() {
+  projLightbox.classList.remove('active');
+  document.body.style.overflow = '';
+}
+
+function projLbGo(dir) {
+  projCurrent = (projCurrent + dir + projImages.length) % projImages.length;
+  projLightboxImg.src = projImages[projCurrent];
+}
+
+projLbPrev.addEventListener('click', () => projLbGo(-1));
+projLbNext.addEventListener('click', () => projLbGo(1));
+projLightboxClose.addEventListener('click', closeProjLightbox);
+projLightbox.addEventListener('click', (e) => { if (e.target === projLightbox) closeProjLightbox(); });
+document.addEventListener('keydown', (e) => {
+  if (!projLightbox.classList.contains('active')) return;
+  if (e.key === 'Escape')      closeProjLightbox();
+  if (e.key === 'ArrowLeft')   projLbGo(-1);
+  if (e.key === 'ArrowRight')  projLbGo(1);
+});
+
+// Attach click to each project card overlay
+document.querySelectorAll('.proj-view-overlay').forEach(overlay => {
+  overlay.addEventListener('click', (e) => {
+    e.stopPropagation();
+    const card   = overlay.closest('.project-card');
+    const title  = card.dataset.projTitle  || '';
+    const desc   = card.dataset.projDesc   || '';
+    const imgs   = Array.from(card.querySelectorAll('.project-img img, .project-slider img.slide, .project-img > img'))
+      .filter((img, idx, arr) => arr.indexOf(img) === idx)
+      .map(img => img.src);
+    // dedupe
+    const unique = [...new Set(imgs)];
+    // find which slide is currently active (start from it)
+    const activeSlide = card.querySelector('.slide.active, .project-img > img');
+    const startIdx = activeSlide ? unique.indexOf(activeSlide.src) : 0;
+    openProjLightbox(unique, Math.max(0, startIdx), title, desc);
+  });
+});
+
 // ===== AWARDS TAB FILTER =====
 document.querySelectorAll('.awards-tab').forEach(tab => {
   tab.addEventListener('click', () => {
