@@ -43,10 +43,14 @@ function updateActiveLink() {
 // ===== TYPED TEXT EFFECT =====
 const typedEl = document.getElementById('typedText');
 const phrases = [
-  'IT Student',
-  'Web Developer',
-  'Python Programmer',
-  'UI/UX Enthusiast',
+  'Data Organization',
+  'Record Management',
+  'MS Excel & MS Word',
+  'Documentation',
+  'Report Preparation',
+  'Detail-Oriented',
+  'Fast Learner',
+  'Team Collaborator',
 ];
 let phraseIndex = 0;
 let charIndex = 0;
