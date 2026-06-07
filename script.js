@@ -155,17 +155,20 @@ const formStatus = document.getElementById('formStatus');
 
 contactForm.addEventListener('submit', (e) => {
   e.preventDefault();
-  const btn = contactForm.querySelector('button[type="submit"]');
-  btn.disabled = true;
-  btn.textContent = 'Sending...';
 
-  // Simulate send (replace with actual backend/EmailJS integration)
-  setTimeout(() => {
-    formStatus.textContent = '✅ Message sent! I\'ll get back to you soon.';
-    formStatus.style.color = '#4caf50';
-    contactForm.reset();
-    btn.disabled = false;
-    btn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Message';
-    setTimeout(() => { formStatus.textContent = ''; }, 5000);
-  }, 1500);
+  const name    = document.getElementById('name').value.trim();
+  const email   = document.getElementById('email').value.trim();
+  const subject = document.getElementById('subject').value.trim();
+  const message = document.getElementById('message').value.trim();
+
+  const to      = 'luzon.aldrinjay@dnsc.edu.ph';
+  const body    = `Name: ${name}\nEmail: ${email}\n\n${message}`;
+  const mailto  = `mailto:${to}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+  window.location.href = mailto;
+
+  formStatus.textContent = '✅ Your email client has been opened. Please send the message from there.';
+  formStatus.style.color = '#4caf50';
+  contactForm.reset();
+  setTimeout(() => { formStatus.textContent = ''; }, 6000);
 });
